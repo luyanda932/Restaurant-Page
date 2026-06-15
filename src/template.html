@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            Burger Palace
+        </div>
+        <nav class="navbar">
+            <div>
+                <button id="home-button">Home</button>
+                <button id="menu-button">Menu</button>
+                <button id="about-button">About Us</button>
+                <button id="contact-button">Contact</button>
+            </div>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <a href="#" class="fas fa-shopping-cart" id="cart"></a>
+        </div>
+    </header>
+    <div id="content">
+    </div>
+    <footer>
+        <div class="copyright">
+            Copyright &copy; 2026 Burger Palace. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        const menu = document.getElementById("menu-bars");
+        const navbar = document.querySelector(".navbar");
+
+        menu.addEventListener("click", () => {
+            menu.classList.toggle("fa-times");
+            navbar.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
