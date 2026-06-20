@@ -9,6 +9,7 @@ export default {
     filename: "main.js",
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
+	publicPath: "/Restaurant-Page/",
   },
   plugins: [
     new HtmlWebpackPlugin({
