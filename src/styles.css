@@ -148,6 +148,17 @@ header form {
   position: relative;
 }
 
+header form .search-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+header form .search-container #search-bar-icon {
+  position: absolute;
+  right: 
+}
+
 header form .search-input {
   border: 1px solid #ccc;
   border-radius: 4.5rem;
