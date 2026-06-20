@@ -20,45 +20,50 @@ export default function loadMenu() {
   subHeading.classList.add("sub-heading");
   menuSection.appendChild(subHeading);
 
-  content.appendChild(subHeading);
+  const mealsHeading = document.createElement("h2");
+  mealsHeading.classList.add("heading");
+  mealsHeading.textContent = "Meals";
 
-  const burgersHeading = document.createElement("h2");
-  burgersHeading.classList.add("heading");
-  burgersHeading.textContent = "Burgers";
-
-  const burgerItems = [
+  const mealItems = [
     {
       name: "Cheeseburger Meal",
       price: "$7.99",
       description:
-        "A classic cheeseburger with lettuce, tomato, and our special sauce with fries and a drink.",
+        "A classic cheeseburger with lettuce, tomato, cheese, and our special sauce served with fries and a drink.",
       image: "cheeseburger-2.jpg",
     },
     {
       name: "Double Cheeseburger Meal",
       price: "$9.99",
       description:
-        "A double cheeseburger with lettuce, tomato, and our special sauce.",
+        "A double cheeseburger with lettuce, tomato, cheese, and our special sauce served with fries and a drink.",
       image: "double-cheeseburger.jpg",
     },
     {
       name: "Chicken Burger Meal",
       price: "$6.99",
       description:
-        "A juicy chicken burger with lettuce, tomato, and our special sauce.",
-      image: "chicken-burger-4.avif",
+        "A juicy chicken burger with lettuce, tomato, cheese, and our special sauce served with fries and a drink.",
+      image: "chicken-burger.jpg",
     },
     {
-      name: "Double Chicken Burger Meal",
-      price: "$8.99",
+      name: "Beef Burrito",
+      price: "$6.99",
       description:
-        "A double chicken burger with lettuce, tomato, and our special sauce.",
-      image: "double-chicken-burger.webp",
+        "Seasoned ground beef, cheddar cheese, Mexican rice, and beans wrapped in a warm tortilla served with fries and a drink.",
+      image: "beef-burrito.webp",
     },
+    {
+      name: "Chicken Burrito",
+      price: "$6.99",
+      description:
+        "Seasoned chicken, cheese, Mexican rice, and beans wrapped in a warm tortilla served with fries and a drink.",
+      image: "chicken-burrito.jpg",
+    }
   ];
-  const burgerDiv = createDiv(burgerItems);
-  menuSection.appendChild(burgersHeading);
-  menuSection.appendChild(burgerDiv);
+  const mealsDiv = createDiv(mealItems);
+  menuSection.appendChild(mealsHeading);
+  menuSection.appendChild(mealsDiv);
 
   const sidesHeading = document.createElement("h2");
   sidesHeading.textContent = "Sides";
@@ -80,7 +85,7 @@ export default function loadMenu() {
       name: "Loaded Fries",
       price: "$1.49",
       description:
-        "Crispy golden fries loaded with cheese, grilled onions, and our special sauces.",
+        "Crispy golden fries loaded with cheese, bacon, and our special sauces.",
       image: "cheese-fries.png",
     },
     {
@@ -141,7 +146,7 @@ export default function loadMenu() {
       name: "Fanta Orange",
       price: "$1.49",
       description: "Refreshing Fanta Orange.",
-      image: "fanta.png",
+      image: "fanta-orange.webp",
     },
     {
       name: "Vanilla Milkshake",

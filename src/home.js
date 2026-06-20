@@ -1,7 +1,7 @@
 import image1 from "../images/cheeseburger-2.jpg";
 import image2 from "../images/double-cheeseburger.jpg";
-import image3 from "../images/chicken-burger-3.webp";
-import image4 from "../images/chicken-burger-4.avif";
+import image3 from "../images/chicken-burger.jpg";
+import image4 from "../images/beef-burrito-2.webp";
 
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
@@ -28,21 +28,21 @@ export default function loadHome() {
 
   let slideContent = [
     "Cheeseburger Meal",
-    "A classic cheeseburger with lettuce, tomato, and our special sauce with fries and a drink.",
+    "A classic cheeseburger with lettuce, tomato, cheese and our special sauce servedwith fries and a drink.",
     image1,
   ];
   const slideDiv1 = createSlide(...slideContent);
 
   slideContent = [
     "Double Cheeseburger Meal",
-    "A double cheeseburger with lettuce, tomato, and our special sauce.",
+    "A double cheeseburger with lettuce, tomato, cheese, and our special sauce servedwith fries and a drink.",
     image2,
   ];
   const slideDiv2 = createSlide(...slideContent);
 
   slideContent = [
-    "Double Chicken Burger Meal",
-    "A juicy chicken burger with lettuce, tomato, and our special sauce.",
+    "Chicken Burger Meal",
+    "A juicy chicken burger with lettuce, tomato, cheese, and our special sauce servedwith fries and a drink.",
     image3,
   ];
   const slideDiv3 = createSlide(...slideContent);
@@ -56,10 +56,19 @@ export default function loadHome() {
   const h1 = document.createElement("h1");
   h1.textContent = "Popular Dishes";
   h1.classList.add("heading");
+  dishesSection.append(h3);
+  dishesSection.append(h1);
   const dishesContainer = document.createElement("div");
   dishesContainer.classList.add("dishes-container");
   
-  const card1 = createDishesCard();
+  const card1 = createDishesCard(image1, "Cheeseburger Meal", "$7.99");
+  const card2 = createDishesCard(image3, "Chicken Burger Meal", "$6.99");
+  const card3 = createDishesCard(image4, "Beef Burrito Meal", "$6.99");
+
+  dishesContainer.appendChild(card1);
+  dishesContainer.appendChild(card2);
+  dishesContainer.appendChild(card3);
+  dishesSection.appendChild(dishesContainer);
 
   wrapper.appendChild(slideDiv1);
   wrapper.appendChild(slideDiv2);
@@ -69,6 +78,7 @@ export default function loadHome() {
   container.appendChild(swiperPagination);
   homeSection.appendChild(container);
   content.appendChild(homeSection);
+  content.appendChild(dishesSection);
 
   // Initialize AFTER adding to the DOM
   const swiper = new Swiper(".home-slider", {
@@ -81,11 +91,7 @@ export default function loadHome() {
       el: ".swiper-pagination",
       clickable: true,
     },
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    loop: true,
   });
 }
 
@@ -119,7 +125,7 @@ function createSlide(item, description, img) {
   return div;
 }
 
-function createDishesCard(item, price, img) {
+function createDishesCard(img, item, price) {
   const div = document.createElement("div");
   div.classList.add("dishes-card");
   const image = document.createElement("img");
