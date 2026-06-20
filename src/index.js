@@ -17,30 +17,35 @@ function clearContent() {
 loadHome();
 
 // Buttons
-const homeButton = document.getElementById("home-button");
-const menuButton = document.getElementById("menu-button");
-const aboutButton = document.getElementById("about-button");
-const contactButton = document.getElementById("contact-button");
+const homeLinks = document.querySelectorAll(".home-link");
+const menuLinks = document.querySelectorAll(".menu-link");
+const aboutLinks = document.querySelectorAll(".about-link");
+const contactLinks = document.querySelectorAll(".contact-link");
 
-homeButton.addEventListener("click", () => {
-  clearContent();
-  loadHome();
+homeLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    clearContent();
+    loadHome();
+  });
 });
 
-menuButton.addEventListener("click", () => {
-  clearContent();
-  loadMenu();
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    clearContent();
+    loadMenu();
+  });
 });
 
-aboutButton.addEventListener("click", () => {
-  clearContent();
-  loadAbout();
+aboutLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    clearContent();
+    loadAbout();
+  });
 });
 
-contactButton.addEventListener("click", () => {
-  clearContent();
-  loadContact();
+contactLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    clearContent();
+    loadContact();
+  });
 });
-
-const header = document.querySelector("header");
-const nav = document.querySelector("nav");

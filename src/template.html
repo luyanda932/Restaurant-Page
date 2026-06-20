@@ -16,21 +16,68 @@
         </div>
         <nav class="navbar">
             <div>
-                <button id="home-button">Home</button>
-                <button id="menu-button">Menu</button>
-                <button id="about-button">About Us</button>
-                <button id="contact-button">Contact</button>
+                <button class="home-link">Home</button>
+                <button class="menu-link">Menu</button>
+                <button class="about-link">About Us</button>
+                <button class="contact-link">Contact</button>
             </div>
         </nav>
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
+            <form>
+                <div class="search-form">
+                <input type="text" placeholder="Search..." class="search-input">
+                
+                    <i class="fas fa-search" id="search-icon"></i></div>
+            </form>
             <a href="#" class="fas fa-shopping-cart" id="cart"></a>
         </div>
     </header>
     <div id="content">
     </div>
-    <footer>
-        <div class="copyright">
+    <footer class="footer">
+        <div class="footer-left">
+            <h2>Burger Palace</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor efficitur dui, vitae elementum
+                magna feugiat vel. Curabitur mi erat, mollis vehicula sodales ut, dignissim sit amet erat. Quisque
+                eleifend velit vitae tortor volutpat commodo.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <h2>Quick Links</h2>
+                <ul class="box">
+                    <li><a href="#" class="home-link">Home</a></li>
+                    <li><a href="#" class="menu-link">Menu</a></li>
+                    <li><a href="#" class="about-link">About Us</a></li>
+                    <li><a href="#" class="contact-link">Contact US</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Contact Info</h2>
+                <ul class="box">
+                    <li><a href="#">Email: example@gmail.com</a></li>
+                    <li><a href="#">Phone: +27 73 437 0954</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Address</h2>
+                <ul class="box">
+                    <li><a href="#">2133 Bowling Avenue, Morningside, Sandton, 2196</a></li>
+                    <li><a href="#">312 Main Street, Newtown, Johannesburg, 2001</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <div class="footer-bottom">
             Copyright &copy; 2026 Burger Palace. All rights reserved.
         </div>
     </footer>
@@ -41,6 +88,13 @@
         menu.addEventListener("click", () => {
             menu.classList.toggle("fa-times");
             navbar.classList.toggle("active");
+        });
+
+        const searchInput = document.querySelector(".search-input");
+        const searchIcon = document.getElementById("search-icon");
+        searchIcon.addEventListener("click", () => {
+            searchIcon.classList.toggle("fa-times");
+            searchInput.classList.toggle("active");
         });
     </script>
 </body>
