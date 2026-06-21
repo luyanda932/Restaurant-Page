@@ -1,27 +1,28 @@
-// webpack.config.js
 import path from "node:path";
+import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default {
   mode: "development",
+
   entry: "./src/index.js",
+
   output: {
     filename: "main.js",
-    path: path.resolve(import.meta.dirname, "dist"),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-	publicPath: "/Restaurant-Page/",
+    publicPath: "/",
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
   ],
-  resolve: {
-    fallback: {
-      path: false,
-      fs: false,
-    },
-  },
+
   module: {
     rules: [
       {
@@ -37,5 +38,15 @@ export default {
         type: "asset/resource",
       },
     ],
+  },
+
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    open: true,
+    hot: true,
+    port: 8080,
+    historyApiFallback: true,
   },
 };

@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            Burger Palace
+            Urban Bites
         </div>
         <nav class="navbar">
             <div>
@@ -27,9 +27,10 @@
             <form>
                 <div class="search-form">
                     <input type="text" placeholder="Search..." class="search-input">
-                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-search" id="search-bar-icon"></i>
                 </div>
             </form>
+            <i class="fas fa-search" id="search-icon"></i>
             <a href="#" class="fas fa-shopping-cart" id="cart"></a>
         </div>
     </header>
@@ -37,7 +38,7 @@
     </div>
     <footer class="footer">
         <div class="footer-left">
-            <h2>Burger Palace</h2>
+            <h2>Urban Bites</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor efficitur dui, vitae elementum
                 magna feugiat vel. Curabitur mi erat, mollis vehicula sodales ut, dignissim sit amet erat. Quisque
                 eleifend velit vitae tortor volutpat commodo.</p>
@@ -78,7 +79,7 @@
         </ul>
         <hr>
         <div class="footer-bottom">
-            Copyright &copy; 2026 Burger Palace. All rights reserved.
+            Copyright &copy; 2026 Urban Bites. All rights reserved.
         </div>
     </footer>
     <script>
@@ -91,10 +92,12 @@
         });
 
         const searchInput = document.querySelector(".search-input");
+        const searchBarIcon = document.getElementById("search-bar-icon");
         const searchIcon = document.getElementById("search-icon");
         searchIcon.addEventListener("click", () => {
             searchIcon.classList.toggle("fa-times");
             searchInput.classList.toggle("active");
+            searchBarIcon.classList.toggle("active");
         });
     </script>
 </body>
