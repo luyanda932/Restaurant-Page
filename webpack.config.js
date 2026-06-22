@@ -14,7 +14,7 @@ export default {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: "/Restaurant-Page",
+    publicPath: "/Restaurant-Page/",
   },
 
   plugins: [
