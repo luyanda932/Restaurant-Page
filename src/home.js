@@ -28,21 +28,21 @@ export default function loadHome() {
 
   let slideContent = [
     "Cheeseburger Meal",
-    "A classic cheeseburger with lettuce, tomato, cheese and our special sauce servedwith fries and a drink.",
+    "A classic cheeseburger with lettuce, tomato, cheese and our special sauce served with fries and a drink.",
     image1,
   ];
   const slideDiv1 = createSlide(...slideContent);
 
   slideContent = [
     "Double Cheeseburger Meal",
-    "A double cheeseburger with lettuce, tomato, cheese, and our special sauce servedwith fries and a drink.",
+    "A double cheeseburger with lettuce, tomato, cheese, and our special sauce served with fries and a drink.",
     image2,
   ];
   const slideDiv2 = createSlide(...slideContent);
 
   slideContent = [
     "Chicken Burger Meal",
-    "A juicy chicken burger with lettuce, tomato, cheese, and our special sauce servedwith fries and a drink.",
+    "A juicy chicken burger with lettuce, tomato, cheese, and our special sauce served with fries and a drink.",
     image3,
   ];
   const slideDiv3 = createSlide(...slideContent);
