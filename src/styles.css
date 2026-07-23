@@ -566,24 +566,6 @@ header .icons #cart:hover {
   color: #fff;
   background-color: #011c39;
 }
-
-.footer ul li,
-.footer-bottom {
-  font-size: 1.3rem;
-}
-
-.footer-top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10%;
-  margin-bottom: 4rem;
-}
-.footer-left {
-  margin-right: 1.25em;
-  margin-bottom: 2em;
-  width: 25%;
-}
 .footer h2 {
   font-weight: 600;
   font-size: 17px;
@@ -595,28 +577,21 @@ header .icons #cart:hover {
 .footer li {
   line-height: 2em;
 }
-.footer-right {
-  display: flex;
-  flex-flow: row wrap;
-  width: 60%;
-}
-.footer-right > * {
-  margin-right: 1.25em;
-}
-#quick-links a:hover {
-
-}
-.box a {
-  color: #999;
-}
-hr {
-  background-color: #999;
-}
+.footer ul li,
 .footer-bottom {
-  text-align: center;
-  color: #999;
-  padding-top: 50px;
-  grid-column: 1 / 3;
+  font-size: 1.3rem;
+}
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin-bottom: 6rem;
+}
+.footer-left {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+  width: 25%;
 }
 .footer-left p {
   padding-right: 20%;
@@ -637,6 +612,33 @@ hr {
   color: #e7f2f4;
   padding: 10px 12px;
   font-size: 20px;
+}
+.footer-right {
+  display: flex;
+  flex-flow: row wrap;
+  width: 60%;
+}
+.footer-right > * {
+  margin-right: 1.25em;
+}
+#quick-links a:hover {
+    color: white;
+}
+.box a {
+  color: #999;
+}
+hr {
+  height: 1px;
+  border: none;
+  background-color: #364a62;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  padding-top: 3rem;
+  font-size: 1.3rem;
 }
 /* footer styles end */
 
